@@ -63,11 +63,11 @@ Entrada: script conteo_datos.pig
 Ejecución:
   (fuera contenedor)
    ```bash
-  docker cp conteo_datos <nombre-contenedor>:/
+  docker cp conteo_datos.pig <nombre-contenedor>:/
   ```
   (dentro contenedor)
   ```bash
-  pig -x mapreduce conteo_datos 
+  pig -x mapreduce conteo_datos.pig 
   ```
 
 Salida: número de filas del conjunto de datos
@@ -79,11 +79,11 @@ Entrada: script filtrado.pig
 Ejecución:
   (fuera contenedor)
    ```bash
-  docker cp filtrado <nombre-contenedor>:/
+  docker cp filtrado.pig <nombre-contenedor>:/
   ```
   (dentro contenedor)
   ```bash
-  pig -x mapreduce filtrado 
+  pig -x mapreduce filtrado.pig 
   ```
 
 Salida: número de filas que se han pagado usando tarjeta de débito
@@ -95,11 +95,11 @@ Entrada: script producto_mas_frecuente.pig
 Ejecución:
   (fuera contenedor)
    ```bash
-  docker cp producto_mas_frecuente <nombre-contenedor>:/ 
+  docker cp producto_mas_frecuente.pig <nombre-contenedor>:/ 
   ```
   (dentro contenedor)
   ```bash
-  pig -x mapreduce producto_mas_frecuente  
+  pig -x mapreduce producto_mas_frecuente.pig  
   ```
 
 Salida: se devuelven los valores (id_cliente, producto_mas_frecuente, frecuencia)
@@ -111,11 +111,11 @@ Entrada: script rentabilidad_categorias.pig
 Ejecución:
   (fuera contenedor)
    ```bash
-  docker cp rentabilidad_categorias <nombre-contenedor>:/  
+  docker cp rentabilidad_categorias.pig <nombre-contenedor>:/  
   ```
   (dentro contenedor)
   ```bash
-  pig -x mapreduce rentabilidad_categorias   
+  pig -x mapreduce rentabilidad_categorias.pig   
   ```
 
 Salida: se almacena en sistema HDFS
@@ -147,11 +147,11 @@ Entrada: script eficiencia_envios.pig
 Ejecución:
   (fuera contenedor)
    ```bash
-  docker cp eficiencia_envios <nombre-contenedor>:/   
+  docker cp eficiencia_envios.pig <nombre-contenedor>:/   
   ```
   (dentro contenedor)
   ```bash
-  pig -x mapreduce eficiencia_envios    
+  pig -x mapreduce eficiencia_envios.pig    
   ```
 
 Salida: se almacena en sistema HDFS
