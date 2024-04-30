@@ -64,7 +64,7 @@ category_profitability = FOREACH grouped_data {
 }
 
 -- Ordenar por margen de beneficio de forma descendente
-sorted_data = ORDER category_profitability BY Porfit_Margin DESC;
+sorted_data = ORDER category_profitability BY Profit_Margin DESC;
 
 -- Almacenar los resultados
 STORE sorted_data INTO '/tmp/data/category_profitability' USING PigStorage(',');
